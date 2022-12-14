@@ -13,7 +13,7 @@ public class ParkingBoy
 
     public void Park(Car car)
     {
-        if (_lot1.HasCar(car) || _lot2.HasCar(car)) 
+        if (_lot1.HasCar(car) || _lot2.HasCar(car))
             throw new ArgumentException("Car " + car + " has been parked");
 
         if (!_lot1.IsFull())

@@ -1,8 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingLotStep1", "ParkingLotStep1\ParkingLotStep1.csproj", "{91881F1E-66F3-4155-ADA8-A286A4499BB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingLotStep1.Tests", "ParkingLotStep1.Tests\ParkingLotStep1.Tests.csproj", "{F831E486-BB95-40FE-B710-7B7BD2FE3F45}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91881F1E-66F3-4155-ADA8-A286A4499BB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91881F1E-66F3-4155-ADA8-A286A4499BB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91881F1E-66F3-4155-ADA8-A286A4499BB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91881F1E-66F3-4155-ADA8-A286A4499BB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F831E486-BB95-40FE-B710-7B7BD2FE3F45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F831E486-BB95-40FE-B710-7B7BD2FE3F45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F831E486-BB95-40FE-B710-7B7BD2FE3F45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F831E486-BB95-40FE-B710-7B7BD2FE3F45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

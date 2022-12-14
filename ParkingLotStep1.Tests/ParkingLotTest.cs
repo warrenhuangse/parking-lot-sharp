@@ -2,9 +2,8 @@ namespace ParkingLotStep1.Tests;
 
 public class ParkingLotTest : IDisposable
 {
-    private ParkingLot _lot;
-
     private Car _car;
+    private ParkingLot _lot;
 
     public ParkingLotTest()
     {
@@ -12,7 +11,9 @@ public class ParkingLotTest : IDisposable
         _car = new Car();
     }
 
-    public void Dispose() { }
+    public void Dispose()
+    {
+    }
 
     [Fact]
     public void ShouldParkCar()
@@ -26,10 +27,10 @@ public class ParkingLotTest : IDisposable
     public void ShouldNotParkSameCar()
     {
         _lot.Park(_car);
-        
+
         Assert.Throws<ArgumentException>(() => _lot.Park(_car));
     }
-    
+
     [Fact]
     public void ShouldUnparkParkedCar()
     {
@@ -37,13 +38,13 @@ public class ParkingLotTest : IDisposable
         _lot.Unpark(_car);
         Assert.False(_lot.HasCar(_car));
     }
-    
+
     [Fact]
     public void ShouldNotUnparkUnknownCar()
     {
         Assert.Throws<ArgumentException>(() => _lot.Unpark(_car));
     }
-    
+
     [Fact]
     public void ShouldNotParkCarWhileParkingLotIsFull()
     {

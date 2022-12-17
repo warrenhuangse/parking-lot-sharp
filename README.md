@@ -32,9 +32,13 @@ Parking Lot 是 OO BootCamp 的练习题。
 dotnet restore
 dotnet build
 ```
-* 测试
+* 单元测试
 ```
 dotnet test
+```
+* 生成Coverlet单元测试覆盖率报告
+```
+dotnet test --collect:"XPlat Code Coverage"
 ```
 
 # Notes

@@ -4,7 +4,7 @@ namespace ParkingLotStep7;
 
 public abstract class ParkingRole : IParkable
 {
-    private const string Indent = "\t";
+    private const char Indent = '\t';
 
     private readonly IParkable _parkable1;
     private readonly IParkable _parkable2;
@@ -44,7 +44,7 @@ public abstract class ParkingRole : IParkable
             return;
         }
 
-        throw new ArgumentException("Faile to unpark car " + car);
+        throw new ArgumentException("Fail to unpark car " + car);
     }
 
     public bool HasCar(Car car)
@@ -110,7 +110,7 @@ public abstract class ParkingRole : IParkable
     private string Prefix(int level)
     {
         var stringBuilder = new StringBuilder();
-        for (int i = 0; i < level; i++)
+        for (var i = 0; i < level; i++)
         {
             stringBuilder.Append(Indent);
         }

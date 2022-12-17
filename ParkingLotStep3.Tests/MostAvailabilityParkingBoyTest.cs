@@ -25,7 +25,7 @@ public class MostAvailabilityParkingBoyTest : BaseParkingBoyTest<MostAvailabilit
     }
 
     [Fact]
-    public void ShouldParkfirstWhileTwoLotsHaveSameAvailability()
+    public void ShouldParkFirstWhileTwoLotsHaveSameAvailability()
     {
         Lot1 = new ParkingLot(2);
         Lot2 = new ParkingLot(2);

@@ -19,8 +19,8 @@ Parking Lot 是 OO BootCamp 的练习题。
 
 # Notes
 Following design changes has been made.
-## Redesigned BaseParkingBoyTest class and its derived classes
-Base on the following two facts, the BaseParkingBoyTest has been slightly redesigned instead of purely rewritten from its [Java counterparts](https://github.com/dreamhead/parking-lot/commit/c095a364d0289bd2881fec7a6949c69a3370388e#diff-536ec9c6d90e1b828901e40c6bbb064385264e45fe6c01e407587d73fc17f63e).
+## Redesigned base test classes and their derived classes
+Base on the following two facts, the base test class has been slightly redesigned instead of purely rewritten from its [Java counterparts](https://github.com/dreamhead/parking-lot/commit/c095a364d0289bd2881fec7a6949c69a3370388e#diff-536ec9c6d90e1b828901e40c6bbb064385264e45fe6c01e407587d73fc17f63e).
 1. [xUnit per test setup is defined in test constructor](#xunit-per-test-setup-is-defined-in-test-constructor)
 2. [It is inappropriate to call overriden method in base class constructor](#it-is-inappropriate-to-call-overridable-method-in-base-class-constructor)
 ### xUnit per test setup is defined in test constructor

@@ -8,18 +8,18 @@ public class FirstAvailabilityParkingBoy : ParkingBoy
 
     public override void Park(Car car)
     {
-        if (_lot1.HasCar(car) || _lot2.HasCar(car))
+        if (Lot1.HasCar(car) || Lot2.HasCar(car))
             throw new ArgumentException("Car " + car + " has been parked");
 
-        if (!_lot1.IsFull())
+        if (!Lot1.IsFull())
         {
-            _lot1.Park(car);
+            Lot1.Park(car);
             return;
         }
 
-        if (!_lot2.IsFull())
+        if (!Lot2.IsFull())
         {
-            _lot2.Park(car);
+            Lot2.Park(car);
             return;
         }
 

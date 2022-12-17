@@ -4,7 +4,7 @@ public class LeastAvailabilityParkingBoyTest : BaseParkingBoyTest
 {
     private readonly IParkingStrategy _strategy = new LeastAvailabilityParkingStrategy();
     private ParkingBoy? _boy;
-    
+
     protected override ParkingBoy Role => _boy ?? new ParkingBoy(Parkable1, Parkable2, _strategy);
 
     [Fact]

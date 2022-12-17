@@ -20,13 +20,8 @@ public abstract class ParkingRole : IParkable
 
         var lot = FindAvailableLot();
         _ = lot ?? throw new Exception("No lot for more cars");
-        
-        lot.Park(car);
-    }
 
-    private IParkable? FindAvailableLot()
-    {
-        return _strategy.GetAvailableLot(_parkable1, _parkable2);
+        lot.Park(car);
     }
 
     public void Unpark(Car car)
@@ -59,5 +54,10 @@ public abstract class ParkingRole : IParkable
     public int GetAvailability()
     {
         return _parkable1.GetAvailability() + _parkable2.GetAvailability();
+    }
+
+    private IParkable? FindAvailableLot()
+    {
+        return _strategy.GetAvailableLot(_parkable1, _parkable2);
     }
 }

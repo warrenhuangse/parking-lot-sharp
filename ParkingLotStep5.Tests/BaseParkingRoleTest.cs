@@ -1,18 +1,18 @@
 namespace ParkingLotStep5.Tests;
 
-public abstract class BaseParkingRoleTest<TRole, TParkable1, TParkable2> : IDisposable 
+public abstract class BaseParkingRoleTest<TRole, TParkable1, TParkable2> : IDisposable
     where TRole : ParkingRole where TParkable1 : IParkable where TParkable2 : IParkable
 {
     protected readonly Car Car;
     protected TParkable1 Parkable1;
     protected TParkable2 Parkable2;
-    
-    protected abstract TRole Role { get; }
 
     protected BaseParkingRoleTest()
     {
         Car = new Car();
     }
+
+    protected abstract TRole Role { get; }
 
     public void Dispose()
     {

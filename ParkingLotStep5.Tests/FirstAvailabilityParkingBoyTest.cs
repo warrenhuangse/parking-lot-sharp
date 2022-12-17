@@ -4,8 +4,8 @@ public class FirstAvailabilityParkingBoyTest : BaseParkingBoyTest
 {
     private readonly IParkingStrategy _strategy = new FirstAvailabilityParkingStrategy();
 
-    protected override ParkingBoy Role => new (Parkable1, Parkable2, _strategy);
-    
+    protected override ParkingBoy Role => new(Parkable1, Parkable2, _strategy);
+
     [Fact]
     public void ShouldParkFirstLotFirst()
     {

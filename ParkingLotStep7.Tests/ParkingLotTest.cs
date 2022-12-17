@@ -1,5 +1,3 @@
-using Microsoft.VisualStudio.TestPlatform.ObjectModel;
-
 namespace ParkingLotStep7.Tests;
 
 public class ParkingLotTest : IDisposable

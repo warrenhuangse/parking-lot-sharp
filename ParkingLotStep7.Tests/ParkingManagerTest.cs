@@ -39,25 +39,25 @@ public class ParkingManagerTest : BaseParkingRoleTest<ParkingManager, ParkingLot
     public void ShouldPrintStatus()
     {
         Assert.Equal(
-            "[ParkingManager: 3 total, 0 occupied, 3 available" 
+            "[ParkingManager: 3 total, 0 occupied, 3 available"
             + Environment.NewLine
-            + "\t[ParkingLot: 1 total, 0 occupied, 1 available]," 
+            + "\t[ParkingLot: 1 total, 0 occupied, 1 available],"
             + Environment.NewLine
-            + "\t[ParkingBoy: 2 total, 0 occupied, 2 available" 
+            + "\t[ParkingBoy: 2 total, 0 occupied, 2 available"
             + Environment.NewLine
-            + "\t\t[ParkingLot: 1 total, 0 occupied, 1 available]," 
+            + "\t\t[ParkingLot: 1 total, 0 occupied, 1 available],"
             + Environment.NewLine
             + "\t\t[ParkingLot: 1 total, 0 occupied, 1 available]]]"
-            ,Role.GetStatus());
+            , Role.GetStatus());
         Role.Park(Car);
         Assert.Equal(
-            "[ParkingManager: 3 total, 1 occupied, 2 available" 
-            + Environment.NewLine 
-            + "\t[ParkingLot: 1 total, 1 occupied, 0 available]," 
+            "[ParkingManager: 3 total, 1 occupied, 2 available"
             + Environment.NewLine
-            + "\t[ParkingBoy: 2 total, 0 occupied, 2 available" 
+            + "\t[ParkingLot: 1 total, 1 occupied, 0 available],"
             + Environment.NewLine
-            + "\t\t[ParkingLot: 1 total, 0 occupied, 1 available],"  
+            + "\t[ParkingBoy: 2 total, 0 occupied, 2 available"
+            + Environment.NewLine
+            + "\t\t[ParkingLot: 1 total, 0 occupied, 1 available],"
             + Environment.NewLine
             + "\t\t[ParkingLot: 1 total, 0 occupied, 1 available]]]"
             , Role.GetStatus());

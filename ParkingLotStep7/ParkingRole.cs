@@ -10,13 +10,14 @@ public abstract class ParkingRole : IParkable
     private readonly IParkable _parkable2;
     private readonly IParkingStrategy _strategy;
 
-    protected abstract string Name { get; }
     protected ParkingRole(IParkable parkable1, IParkable parkable2, IParkingStrategy strategy)
     {
         _parkable1 = parkable1;
         _parkable2 = parkable2;
         _strategy = strategy;
     }
+
+    protected abstract string Name { get; }
 
     public void Park(Car car)
     {

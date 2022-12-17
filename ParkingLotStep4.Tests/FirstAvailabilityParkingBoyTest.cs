@@ -2,7 +2,7 @@ namespace ParkingLotStep4.Tests;
 
 public class FirstAvailabilityParkingBoyTest : BaseParkingBoyTest<ParkingBoy>
 {
-    protected override ParkingBoy Boy => new ParkingBoy(Lot1, Lot2, new FirstAvailabilityParkingStrategy());
+    protected override ParkingBoy Boy => new(Lot1, Lot2, new FirstAvailabilityParkingStrategy());
 
     [Fact]
     public void ShouldParkFirstLotFirst()

@@ -16,7 +16,7 @@ public class MostAvailabilityParkingBoyTest : BaseParkingBoyTest<ParkingBoy>
         Assert.True(Lot1.HasCar(Car));
         Assert.False(Lot2.HasCar(Car));
     }
-    
+
     [Fact]
     public void ShouldParkSecondWhileSecondLotHasMoreAvailability()
     {
@@ -27,7 +27,7 @@ public class MostAvailabilityParkingBoyTest : BaseParkingBoyTest<ParkingBoy>
         Assert.False(Lot1.HasCar(Car));
         Assert.True(Lot2.HasCar(Car));
     }
-    
+
     [Fact]
     public void ShouldParkFirstWhileTwoLotsHaveSameAvailability()
     {

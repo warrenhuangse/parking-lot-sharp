@@ -44,7 +44,7 @@ public abstract class ParkingRole : IParkable
             return;
         }
 
-        throw new ArgumentException("Fail to unpark car " + car);
+        throw new ArgumentException("Failed to unpark car " + car);
     }
 
     public bool HasCar(Car car)

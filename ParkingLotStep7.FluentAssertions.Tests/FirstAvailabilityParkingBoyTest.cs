@@ -1,3 +1,5 @@
+using FluentAssertions;
+
 namespace ParkingLotStep7.FluentAssertions.Tests;
 
 public class FirstAvailabilityParkingBoyTest : BaseParkingBoyTest
@@ -9,38 +11,48 @@ public class FirstAvailabilityParkingBoyTest : BaseParkingBoyTest
     [Fact]
     public void ShouldParkFirstLotFirst()
     {
+        // Arrange
+        // Act
         Role.Park(Car);
-        Assert.True(Parkable1.HasCar(Car));
-        Assert.False(Parkable2.HasCar(Car));
+        // Assert
+        Parkable1.HasCar(Car).Should().BeTrue();
+        Parkable2.HasCar(Car).Should().BeFalse();
     }
 
     [Fact]
     public void ShouldParkSecondLotWhileFirstLotIsFull()
     {
+        // Arrange
         Role.Park(Car);
+        // Act
         var secondCar = new Car();
         Role.Park(secondCar);
-        Assert.False(Parkable1.HasCar(secondCar));
-        Assert.True(Parkable2.HasCar(secondCar));
+        // Assert
+        Parkable1.HasCar(secondCar).Should().BeFalse();
+        Parkable2.HasCar(secondCar).Should().BeTrue();
     }
 
     [Fact]
     public void ShouldPrintStatus()
     {
-        Assert.Equal(
-            "[ParkingBoy: 2 total, 0 occupied, 2 available"
-            + Environment.NewLine
-            + "\t[ParkingLot: 1 total, 0 occupied, 1 available],"
-            + Environment.NewLine
-            + "\t[ParkingLot: 1 total, 0 occupied, 1 available]]",
-            Role.GetStatus());
+        // Arrange
+        // Act
+        var status = Role.GetStatus();
+        // Assert
+        status.Should().Be("[ParkingBoy: 2 total, 0 occupied, 2 available"
+                           + Environment.NewLine
+                           + "\t[ParkingLot: 1 total, 0 occupied, 1 available],"
+                           + Environment.NewLine
+                           + "\t[ParkingLot: 1 total, 0 occupied, 1 available]]");
+        // Arrange
         Role.Park(Car);
-        Assert.Equal(
-            "[ParkingBoy: 2 total, 1 occupied, 1 available"
-            + Environment.NewLine
-            + "\t[ParkingLot: 1 total, 1 occupied, 0 available],"
-            + Environment.NewLine
-            + "\t[ParkingLot: 1 total, 0 occupied, 1 available]]",
-            Role.GetStatus());
+        // Act
+        status = Role.GetStatus();
+        // Assert
+        status.Should().Be("[ParkingBoy: 2 total, 1 occupied, 1 available"
+                           + Environment.NewLine
+                           + "\t[ParkingLot: 1 total, 1 occupied, 0 available],"
+                           + Environment.NewLine
+                           + "\t[ParkingLot: 1 total, 0 occupied, 1 available]]");
     }
 }

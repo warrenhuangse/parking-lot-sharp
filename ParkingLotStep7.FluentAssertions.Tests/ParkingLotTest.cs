@@ -1,3 +1,5 @@
+using FluentAssertions;
+
 namespace ParkingLotStep7.FluentAssertions.Tests;
 
 public class ParkingLotTest : IDisposable
@@ -18,46 +20,74 @@ public class ParkingLotTest : IDisposable
     [Fact]
     public void ShouldParkCar()
     {
-        Assert.False(_lot.HasCar(_car));
+        // Arrange
+        // Act
+        // Assert
+        _lot.HasCar(_car).Should().BeFalse();
+        // Act
         _lot.Park(_car);
-        Assert.True(_lot.HasCar(_car));
+        // Assert
+        _lot.HasCar(_car).Should().BeTrue();
     }
 
     [Fact]
     public void ShouldNotParkSameCar()
     {
+        // Arrange
         _lot.Park(_car);
-
-        Assert.Throws<ArgumentException>(() => _lot.Park(_car));
+        // Act
+        var action = () => _lot.Park(_car);
+        // Assert
+        action.Should().Throw<ArgumentException>()
+            .Where(e => e.Message.Contains("has been parked"));
     }
 
     [Fact]
     public void ShouldUnparkParkedCar()
     {
+        // Arrange
         _lot.Park(_car);
+        // Act
         _lot.Unpark(_car);
-        Assert.False(_lot.HasCar(_car));
+        // Assert
+        _lot.HasCar(_car).Should().BeFalse();
     }
 
     [Fact]
     public void ShouldNotUnparkUnknownCar()
     {
-        Assert.Throws<ArgumentException>(() => _lot.Unpark(_car));
+        // Arrange
+        // Act
+        var action = () => _lot.Unpark(_car);
+        // Assert
+        action.Should().Throw<ArgumentException>().WithMessage("Failed to unpark car *");
     }
 
     [Fact]
     public void ShouldNotParkCarWhileParkingLotIsFull()
     {
+        // Arrange
         _lot = new ParkingLot(0);
-        Assert.Throws<Exception>(() => _lot.Park(_car));
+        // Act
+        var action = () => _lot.Park(_car);
+        // Assert
+        action.Should().Throw<Exception>().WithMessage("No lot for more car");
     }
 
     [Fact]
     public void ShouldPrintStatus()
     {
+        // Arrange
         _lot = new ParkingLot(1);
-        Assert.Equal("[ParkingLot: 1 total, 0 occupied, 1 available]", _lot.GetStatus());
+        // Act
+        var status = _lot.GetStatus();
+        // Assert
+        status.Should().Be("[ParkingLot: 1 total, 0 occupied, 1 available]");
+        // Arrange
         _lot.Park(_car);
-        Assert.Equal("[ParkingLot: 1 total, 1 occupied, 0 available]", _lot.GetStatus());
+        // Act
+        status = _lot.GetStatus();
+        // Assert
+        status.Should().Be("[ParkingLot: 1 total, 1 occupied, 0 available]");
     }
 }

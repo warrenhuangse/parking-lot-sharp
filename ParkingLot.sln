@@ -30,6 +30,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingLotStep6", "ParkingL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingLotStep6.Tests", "ParkingLotStep6.Tests\ParkingLotStep6.Tests.csproj", "{E118B92C-1436-44FB-87D1-19B9CD38BEDF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingLotStep7", "ParkingLotStep7\ParkingLotStep7.csproj", "{978C4203-E0C7-486F-B413-72757BCCE615}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingLotStep7.Tests", "ParkingLotStep7.Tests\ParkingLotStep7.Tests.csproj", "{F6AF1B51-57DC-4B26-95BC-8ED35E0ECE77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,5 +88,13 @@ Global
 		{E118B92C-1436-44FB-87D1-19B9CD38BEDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E118B92C-1436-44FB-87D1-19B9CD38BEDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E118B92C-1436-44FB-87D1-19B9CD38BEDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{978C4203-E0C7-486F-B413-72757BCCE615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{978C4203-E0C7-486F-B413-72757BCCE615}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{978C4203-E0C7-486F-B413-72757BCCE615}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{978C4203-E0C7-486F-B413-72757BCCE615}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6AF1B51-57DC-4B26-95BC-8ED35E0ECE77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6AF1B51-57DC-4B26-95BC-8ED35E0ECE77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6AF1B51-57DC-4B26-95BC-8ED35E0ECE77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6AF1B51-57DC-4B26-95BC-8ED35E0ECE77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

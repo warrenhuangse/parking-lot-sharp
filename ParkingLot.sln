@@ -34,6 +34,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingLotStep7", "ParkingL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingLotStep7.Tests", "ParkingLotStep7.Tests\ParkingLotStep7.Tests.csproj", "{F6AF1B51-57DC-4B26-95BC-8ED35E0ECE77}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingLotStep7.FluentAssertions.Tests", "ParkingLotStep7.FluentAssertions.Tests\ParkingLotStep7.FluentAssertions.Tests.csproj", "{19E8488B-C53F-4A01-9002-94322B741E7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -96,5 +98,9 @@ Global
 		{F6AF1B51-57DC-4B26-95BC-8ED35E0ECE77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6AF1B51-57DC-4B26-95BC-8ED35E0ECE77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6AF1B51-57DC-4B26-95BC-8ED35E0ECE77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19E8488B-C53F-4A01-9002-94322B741E7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19E8488B-C53F-4A01-9002-94322B741E7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19E8488B-C53F-4A01-9002-94322B741E7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19E8488B-C53F-4A01-9002-94322B741E7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

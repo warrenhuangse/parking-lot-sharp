@@ -17,6 +17,26 @@ Parking Lot 是 OO BootCamp 的练习题。
 * 第六步：停车场超级管理员，他可以管理停车场和停车场管理员或小弟
 * 第七步：打印停车场、停车小弟、停车管理员以及超级管理员的状态报告，展示其管理的详细车位情况
 
+## 基本用法
+
+### 必备条件
+* [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)（SDK 非 Runtime）
+
+### 经过测试的 IDE
+- [X] JetBrains Rider 2022.2.4
+- [X] Visual Studio 2022 17.4
+
+### VS Code / 命令行
+* 编译
+```
+dotnet restore
+dotnet build
+```
+* 测试
+```
+dotnet test
+```
+
 # Notes
 Following design changes has been made.
 ## Redesigned base test classes and their derived classes

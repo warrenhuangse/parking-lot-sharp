@@ -1,2 +1,18 @@
-# Rider
-.idea
+# Rider files
+**/.idea/
+
+# Solution files
+*.suo
+*.user
+*.DotSettings
+*.DotSettings.user
+.vs/
+[Bb]in/
+[Oo]bj/
+_UpgradeReport_Files/
+[Pp]ackages/
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store

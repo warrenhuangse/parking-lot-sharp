@@ -8,6 +8,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingLotStep2", "ParkingL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingLotStep2.Tests", "ParkingLotStep2.Tests\ParkingLotStep2.Tests.csproj", "{CDA1B38E-9CA1-4E28-A089-A71C255F221E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingLotStep3", "ParkingLotStep3\ParkingLotStep3.csproj", "{8CB8F175-643E-46B5-B6BC-C826CC5EB8FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingLotStep3.Tests", "ParkingLotStep3.Tests\ParkingLotStep3.Tests.csproj", "{D913F73C-B4B6-4B16-9033-025DE73196F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,13 @@ Global
 		{CDA1B38E-9CA1-4E28-A089-A71C255F221E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDA1B38E-9CA1-4E28-A089-A71C255F221E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDA1B38E-9CA1-4E28-A089-A71C255F221E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CB8F175-643E-46B5-B6BC-C826CC5EB8FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CB8F175-643E-46B5-B6BC-C826CC5EB8FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CB8F175-643E-46B5-B6BC-C826CC5EB8FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CB8F175-643E-46B5-B6BC-C826CC5EB8FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D913F73C-B4B6-4B16-9033-025DE73196F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D913F73C-B4B6-4B16-9033-025DE73196F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D913F73C-B4B6-4B16-9033-025DE73196F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D913F73C-B4B6-4B16-9033-025DE73196F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

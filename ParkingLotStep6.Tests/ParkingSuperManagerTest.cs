@@ -11,8 +11,9 @@ public class ParkingSuperManagerTest : BaseParkingRoleTest<ParkingSuperManager, 
         Parkable2 = new ParkingManager(new ParkingLot(1), boy, _strategy);
         Role = new ParkingSuperManager(Parkable1, Parkable2, _strategy);
     }
+
     protected override ParkingSuperManager Role { get; }
-    
+
     [Fact]
     public void ShouldParkFirstLotFirst()
     {
@@ -20,7 +21,7 @@ public class ParkingSuperManagerTest : BaseParkingRoleTest<ParkingSuperManager, 
         Assert.True(Parkable1.HasCar(Car));
         Assert.False(Parkable2.HasCar(Car));
     }
-    
+
     [Fact]
     public void ShouldParSecondLotWhileFirstLotIsFull()
     {
